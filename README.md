@@ -3,13 +3,13 @@
 </p>
 
 <p align="right">
-  <a href="http://godoc.org/github.com/rocketlaunchr/dataframe-go"><img src="http://godoc.org/github.com/rocketlaunchr/dataframe-go?status.svg" /></a>
-  <a href="https://goreportcard.com/report/github.com/rocketlaunchr/dataframe-go"><img src="https://goreportcard.com/badge/github.com/rocketlaunchr/dataframe-go" /></a>
-  <a href="https://gocover.io/github.com/rocketlaunchr/dataframe-go"><img src="http://gocover.io/_badge/github.com/rocketlaunchr/dataframe-go" /></a>
+  <a href="http://godoc.org/github.com/matthew188/dataframe-go"><img src="http://godoc.org/github.com/matthew188/dataframe-go?status.svg" /></a>
+  <a href="https://goreportcard.com/report/github.com/matthew188/dataframe-go"><img src="https://goreportcard.com/badge/github.com/matthew188/dataframe-go" /></a>
+  <a href="https://gocover.io/github.com/matthew188/dataframe-go"><img src="http://gocover.io/_badge/github.com/matthew188/dataframe-go" /></a>
 </p>
 
 <p align="center">
-<img src="https://github.com/rocketlaunchr/dataframe-go/raw/master/assets/logo.png" alt="dataframe-go" />
+<img src="https://github.com/matthew188/dataframe-go/raw/master/assets/logo.png" alt="dataframe-go" />
 </p>
 
 Dataframes are used for statistics, machine-learning, and data manipulation/exploration. You can think of a Dataframe as an excel spreadsheet.
@@ -35,16 +35,16 @@ It is recommended your package manager locks to a commit id instead of the maste
 11. Math functions
 12. Plotting (cross-platform)
 
-See [Tutorial](https://github.com/rocketlaunchr/dataframe-go#tutorial) here.
+See [Tutorial](https://github.com/matthew188/dataframe-go#tutorial) here.
 
 ## Installation
 
 ```
-go get -u github.com/rocketlaunchr/dataframe-go
+go get -u github.com/matthew188/dataframe-go
 ```
 
 ```go
-import dataframe "github.com/rocketlaunchr/dataframe-go"
+import dataframe "github.com/matthew188/dataframe-go"
 ```
 
 # DataFrames
@@ -224,8 +224,8 @@ std := stat.StdDev(sf.Values, nil)
 ```go
 import (
 	chart "github.com/wcharczuk/go-chart"
-	"github.com/rocketlaunchr/dataframe-go/plot"
-	wc "github.com/rocketlaunchr/dataframe-go/plot/wcharczuk/go-chart"
+	"github.com/matthew188/dataframe-go/plot"
+	wc "github.com/matthew188/dataframe-go/plot/wcharczuk/go-chart"
 )
 
 sales := dataframe.NewSeriesFloat64("sales", nil, 50.3, nil, 23.4, 56.2, 89, 32, 84.2, 72, 89)
@@ -243,13 +243,13 @@ plt.Display(plot.None)
 Output:
 
 <p align="center">
-<img src="https://github.com/rocketlaunchr/dataframe-go/raw/master/assets/plot.png" alt="plot" />
+<img src="https://github.com/matthew188/dataframe-go/raw/master/assets/plot.png" alt="plot" />
 </p>
 
 ## Math Functions
 
 ```go
-import "github.com/rocketlaunchr/dataframe-go/math/funcs"
+import "github.com/matthew188/dataframe-go/math/funcs"
 
 res := 24
 sx := dataframe.NewSeriesFloat64("x", nil, utils.Float64Seq(1, float64(res), 1))
@@ -264,7 +264,7 @@ funcs.Evaluate(ctx, df, fn, 1)
 Output:
 
 <p align="center">
-<img src="https://github.com/rocketlaunchr/dataframe-go/raw/master/assets/sine.png" alt="sine wave" />
+<img src="https://github.com/matthew188/dataframe-go/raw/master/assets/sine.png" alt="sine wave" />
 </p>
 
 ## Importing Data
@@ -352,7 +352,7 @@ Let's create a list of 8 "fake" employees with a name, title and base hourly wag
 
 ```go
 import "golang.org/x/exp/rand"
-import "rocketlaunchr/dataframe-go/utils/faker"
+import "matthew188/dataframe-go/utils/faker"
 
 src := rand.NewSource(uint64(time.Now().UTC().UnixNano()))
 df := faker.NewDataFrame(8, src, faker.S("name", 0, "Name"), faker.S("title", 0.5, "JobTitle"), faker.S("base rate", 0, "Number", 15, 50))
@@ -412,7 +412,7 @@ dataframe.Apply(ctx, s, applyFn, dataframe.FilterOptions{InPlace: true})
 Let's inform all employees separately on sequential days.
 
 ```go
-import "rocketlaunchr/dataframe-go/utils/utime"
+import "matthew188/dataframe-go/utils/utime"
 
 mts, _ := utime.NewSeriesTime(ctx, "meeting time", "1D", time.Now().UTC(), false, utime.NewSeriesTimeOptions{Size: &[]int{8}[0]})
 df.AddSeries(mts, nil)

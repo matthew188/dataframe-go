@@ -6,14 +6,15 @@ package faker
 
 import (
 	"fmt"
-	"golang.org/x/exp/rand"
 	"reflect"
 	"strings"
 	"time"
 
+	"golang.org/x/exp/rand"
+
 	"github.com/brianvoe/gofakeit/v4"
 
-	dataframe "github.com/rocketlaunchr/dataframe-go"
+	dataframe "github.com/matthew188/dataframe-go"
 )
 
 type s struct {

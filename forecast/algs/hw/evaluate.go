@@ -5,8 +5,8 @@ package hw
 import (
 	"context"
 
-	dataframe "github.com/rocketlaunchr/dataframe-go"
-	"github.com/rocketlaunchr/dataframe-go/forecast"
+	dataframe "github.com/matthew188/dataframe-go"
+	"github.com/matthew188/dataframe-go/forecast"
 )
 
 // Evaluate will measure the quality of the predicted values based on the evaluation calculation defined by evalFunc.

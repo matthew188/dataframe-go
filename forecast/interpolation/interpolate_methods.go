@@ -5,7 +5,7 @@ package interpolation
 import (
 	"context"
 
-	dataframe "github.com/rocketlaunchr/dataframe-go"
+	dataframe "github.com/matthew188/dataframe-go"
 )
 
 // interpolateMethod is the algorithm used to interpolate.

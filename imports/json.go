@@ -12,7 +12,7 @@ import (
 
 	"github.com/goccy/go-json"
 
-	dataframe "github.com/rocketlaunchr/dataframe-go"
+	dataframe "github.com/matthew188/dataframe-go"
 )
 
 // JSONLoadOptions is likely to change.

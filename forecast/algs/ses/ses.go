@@ -7,8 +7,8 @@ import (
 	"context"
 	"errors"
 
-	dataframe "github.com/rocketlaunchr/dataframe-go"
-	"github.com/rocketlaunchr/dataframe-go/forecast"
+	dataframe "github.com/matthew188/dataframe-go"
+	"github.com/matthew188/dataframe-go/forecast"
 )
 
 // ExponentialSmoothingConfig is used to configure the SES algorithm.

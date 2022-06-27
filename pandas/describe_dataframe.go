@@ -5,11 +5,12 @@ package pandas
 import (
 	"context"
 	"fmt"
-	"golang.org/x/sync/errgroup"
 	"math"
 	"sync"
 
-	dataframe "github.com/rocketlaunchr/dataframe-go"
+	"golang.org/x/sync/errgroup"
+
+	dataframe "github.com/matthew188/dataframe-go"
 )
 
 func describeDataframe(ctx context.Context, df *dataframe.DataFrame, opts ...DescribeOptions) (DescribeOutput, error) {
